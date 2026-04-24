@@ -1,5 +1,5 @@
 const axios = require('axios');
-app.post('/webhook', async (req, res) => {
+const app = express();
   const body = req.body;
   if (body.object === 'whatsapp_business_account') {
     try {
