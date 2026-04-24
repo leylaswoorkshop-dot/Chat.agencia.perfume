@@ -26,7 +26,7 @@ app.post('/webhook', async (req, res) => {
   const body = req.body;
   if (body.object === 'whatsapp_business_account') {
     try {
-      await axios.post('https://hook.eu1.make.com/r2w8hakcl13gp1pk2pk14958qf81npxp, body);
+      await axios.post('https://hook.eu1.make.com/r2w8hakcl13gp1pk2pk14958qf81npxp', body);
       console.log("¡Mensaje enviado a Make!");
     } catch (error) {
       console.log("Error al enviar a Make");
