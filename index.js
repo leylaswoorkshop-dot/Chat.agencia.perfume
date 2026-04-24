@@ -1,6 +1,6 @@
 const express = require('express');
 const axios = require('axios');
-const app = express(); // <--- Aquí estaba el error, ya está corregido
+const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
@@ -25,7 +25,6 @@ app.post('/webhook', async (req, res) => {
   const body = req.body;
   if (body.object === 'whatsapp_business_account') {
     try {
-      // Tu URL de Make
       await axios.post('https://hook.eu1.make.com/r2w8hakcl13gp1pk2pk14958qf81npxp', body);
       console.log("¡MENSAJE ENVIADO A MAKE EXITOSAMENTE!");
     } catch (error) {
